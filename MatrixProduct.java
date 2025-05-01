@@ -55,6 +55,15 @@ public class MatrixProduct {
             threads[i].start();
         }
 
+        // Wait for all threads to finish
+        try{
+            for (int i = 0; i < 10; i++) {
+                threads[i].join();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
