@@ -37,4 +37,24 @@ public class MatrixProduct {
         }
         return matrix;    
     }
+
+    public static void main(String[] args) {
+        int [] [] A = generateRandomMatrix();
+        int [] [] B = generateRandomMatrix();
+        int [] [] Result = new int [SIZE] [SIZE];
+
+        WorkerThread[] workers = new WorkerThread[10]; // Number of threads
+        Thread[] threads = new Thread[10]; 
+
+        //Assign 10 rows per thread
+        //for (int i = 0; i < 10; i++) {
+           // int startRow = i * (SIZE / 10);
+           // int endRow = (i + 1) * (SIZE / 10);
+           // workers[i] = new WorkerThread(A, B, Result, startRow, endRow);
+           // threads[i] = new Thread(workers[i]);
+           // threads[i].start();
+        }
+
+
+    }
 }
