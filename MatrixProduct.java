@@ -27,7 +27,8 @@ public class MatrixProduct {
             }
         }
     }
-    // Generate two random matrices of size SIZE x SIZE
+    
+    // Generate two random matrices 
     public static int [][] generateRandomMatrix() {
         Random rand = new Random();
         int[][] matrix = new int[SIZE][SIZE];
@@ -64,8 +65,7 @@ public class MatrixProduct {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        // Print the result matrix
-        // (Optional: Add code here to print the Result matrix if needed)
+        // Print the result matrix (first 10x10 elements)
         System.out.println("Matrix multiplication completed.");
         System.out.println("Result matrix (first 10x10):");
         for (int i = 0; i < 10; i++) {
