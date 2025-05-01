@@ -47,12 +47,12 @@ public class MatrixProduct {
         Thread[] threads = new Thread[10]; 
 
         //Assign 10 rows per thread
-        //for (int i = 0; i < 10; i++) {
-           // int startRow = i * (SIZE / 10);
-           // int endRow = (i + 1) * (SIZE / 10);
-           // workers[i] = new WorkerThread(A, B, Result, startRow, endRow);
-           // threads[i] = new Thread(workers[i]);
-           // threads[i].start();
+        for (int i = 0; i < 10; i++) {
+            int startRow = i * (SIZE / 10);
+            int endRow = (i + 1) * (SIZE / 10);
+            workers[i] = new WorkerThread(A, B, Result, startRow, endRow);
+            threads[i] = new Thread(workers[i]);
+            threads[i].start();
         }
 
 
