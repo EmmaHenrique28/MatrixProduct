@@ -27,7 +27,7 @@ public class MatrixProduct {
             }
         }
     }
-    
+
     // Generate two random matrices 
     public static int [][] generateRandomMatrix() {
         Random rand = new Random();
