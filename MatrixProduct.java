@@ -26,7 +26,15 @@ public class MatrixProduct {
                 }
             }
         }
-        
-
+    // Generate two random matrices of size SIZE x SIZE
+    public static int [][] generateRandomMatrix() {
+        Random rand = new Random();
+        int[][] matrix = new int[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                matrix[i][j] = rand.nextInt(10); // Random integers between 0 and 9
+            }
+        }
+        return matrix;    
     }
 }
