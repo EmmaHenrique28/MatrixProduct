@@ -44,8 +44,8 @@ public class MatrixProduct {
         int [] [] B = generateRandomMatrix();
         int [] [] Result = new int [SIZE] [SIZE];
 
-        WorkerThread[] workers = new WorkerThread[10]; // Number of threads
-        Thread[] threads = new Thread[10]; 
+        WorkerThread[] workers = new WorkerThread[10]; 
+        Thread[] threads = new Thread[10]; // Number of threads
 
         //Assign 10 rows per thread
         for (int i = 0; i < 10; i++) {
@@ -75,5 +75,5 @@ public class MatrixProduct {
         System.out.println();
         }
 
-    } // Close main method
-} // Close MatrixProduct class
+    }
+} 
